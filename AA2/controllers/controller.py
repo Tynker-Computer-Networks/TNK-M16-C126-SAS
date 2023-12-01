@@ -103,17 +103,11 @@ def addAddress():
 
 def addToCart():
     data = request.json
-
-    ### Secure the website by taking important data such as price from server side only###
-    
-    # Loop through each product in products
+   
     for product in products:
-        # Check id product['id'] matches with the product_id in data
         if product['id'] == int(data['product_id']):
-            # Store product in selectedProduct
             selectedProduct = product
     
-    # Set price, total, name, image of the data using selectedProduct
     data['price'] = selectedProduct['selling_price']
     data['total'] = selectedProduct['selling_price'] * data['quantity']
     data['name'] = selectedProduct['name']
@@ -146,8 +140,11 @@ def placeOrder():
     data =  request.json
     cart = data['cart']
     
-    # cart = session.get('cart', [])
-    # # session['cart'] = []
+    # Get cart from the session
+    cart = session.get('cart', [])
+    # Make the sessions's cart empty
+    # session['cart'] = []
+
 
     orders = session.get('orders', [])
     if(not orders):
