@@ -1,5 +1,5 @@
 
-1. Open the link to the toy store website:
+1. Open the link to the toy store website: https://tnk-m16-toywebsite.onrender.com/
 2. Inspect the code and open network tab.
 3. Select a product and click on add to cart
    a. Observe that request is made to /addToCart
@@ -14,7 +14,7 @@
         }
     
     all info regarding the product is sent from user end
-4. Inspect and change the value of the product from browser
+4. Inspect and change the value of the product from browser and use burp suite : https://portswigger.net/burp/releases/professional-community-2023-10-3-6
 5. Place to order to get item at updated price.
 
  
