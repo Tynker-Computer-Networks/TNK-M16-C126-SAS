@@ -143,7 +143,7 @@ def placeOrder():
     # Get cart from the session
     cart = session.get('cart', [])
     # Make the sessions's cart empty
-    # session['cart'] = []
+    session['cart'] = []
 
 
     orders = session.get('orders', [])
